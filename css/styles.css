@@ -556,10 +556,18 @@ footer .another-color {
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     margin-right: 24px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form-input placeholder {
+.footer-form-input::placeholder {
     color: #fff;
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus,
+.footer-form-input:active {
+    border: 1px solid #4d5ae5;
+
 }
 
 .footer-subscribe-button {
@@ -577,6 +585,11 @@ footer .another-color {
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.footer-subscribe-button:hover {
+    background-color: #404bbf;
+}
+
 
 .footer-subscribe-icon {
     fill: #fff;
