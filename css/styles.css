@@ -767,6 +767,11 @@ footer .another-color {
     margin-bottom: 24px;
 }
 
+.form-button:hover,
+.form-button:focus {
+    background-color: #404bbf;
+}
+
 .form-textarea-container {
     display: flex;
 }
