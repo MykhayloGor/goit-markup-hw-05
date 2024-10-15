@@ -383,7 +383,7 @@
 
 
                     <button class="footer-subscribe-button" type="submit">Subscribe<svg class="footer-subscribe-icon"
-                            width="24" height="20">
+                            width="24" height="24">
                             <use href="./images/icons.svg#icon-send"></use>
                         </svg>
                     </button>
@@ -392,7 +392,7 @@
         </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-open">
         <div class="modal">
             <button class="modal-close-button" type="button" data-modal-close>
                 <svg class="icon-close" width="8" height="8">
@@ -404,8 +404,8 @@
                 <div class="form-container">
                     <label class="form-label" for="user-name">Name</label>
                     <div class="form-input-wrap">
-                        <input class="form-input" type="text" id="user-name" name="name" required />
-                        <svg class="input-icon-svg" width="24" height="24">
+                        <input class="form-input" type="text" id="user-name" name="user-name" required />
+                        <svg class="input-icon-svg" width="18" height="24">
                             <use href="./images/icons.svg#icon-person"></use>
                         </svg>
                     </div>
@@ -414,7 +414,7 @@
                     <label class="form-label" for="user-phone">Phone</label>
                     <div class="form-input-wrap">
                         <input class="form-input" type="tel" id="user-phone" name="phone" required />
-                        <svg class="input-icon-svg" width="24" height="24">
+                        <svg class="input-icon-svg" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>
                     </div>
@@ -425,20 +425,21 @@
                     <label class="form-label" for="user-email">Email</label>
                     <div class="form-input-wrap">
                         <input class="form-input" type="email" id="user-email" name="email" required />
-                        <svg class="input-icon-svg" width="24" height="24">
+                        <svg class="input-icon-svg" width="18" height="24">
                             <use href="./images/icons.svg#icon-email"></use>
                         </svg>
                     </div>
                 </div>
 
                 <div class="form-container form-textarea-container">
-                    <label class="form-label form-label-textarea" for="comment">Comment
-                        <textarea class="form-textarea" name="comment" id="comment" placeholder="Text input"></textarea>
+                    <label class="form-label form-label-textarea" for="user-comment">Comment
+                        <textarea class="form-textarea" name="user-comment" id="user-comment"
+                            placeholder="Text input"></textarea>
                     </label>
-                    <div class="checkbox-box">
-                        <input class="checkbox-input" type="checkbox" name="privacy-policy" value="acceptance"
-                            id="user-checkbox" />
-                        <label class="checkbox-label" for="user-checkbox"><span class="input-span-check"><svg
+                    <div class="checkbox-container">
+                        <input class="checkbox-input visually-hidden" type="checkbox" name="user-privacy" value="true"
+                            id="user-privacy" />
+                        <label class="checkbox-label" for="user-privacy"><span class="input-span-check"><svg
                                     class="input-icon-svg" width="10" height="8">
                                     <use href="./images/icons.svg#icon-email"></use>
                                 </svg></span> I accept the terms and conditions of the
