@@ -867,7 +867,7 @@ footer .another-color {
 .input-icon-check-svg {}
 
 .checkbox-input:checked+.checkbox-label .input-span-check {
-    background-color: #4d5ae5;
+    background-color: #404bbf;
     border: none;
     fill: #f4f4fd;
 }
