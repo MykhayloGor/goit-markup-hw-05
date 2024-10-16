@@ -853,7 +853,8 @@ footer .another-color {
     color: #8e8f99;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+
 }
 
 .checkbox-link {
