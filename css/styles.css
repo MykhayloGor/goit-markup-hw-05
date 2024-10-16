@@ -613,6 +613,7 @@ footer .another-color {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 999;
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 0;
     visibility: hidden;
@@ -653,16 +654,15 @@ footer .another-color {
     position: absolute;
     top: 24px;
     right: 24px;
-    border-radius: 50%;
-    fill: black;
-    background-color: #e7e9fc;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     width: 24px;
     height: 24px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     padding: 0;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -681,12 +681,12 @@ footer .another-color {
 
 .form-text {
     font-weight: 500;
-    color: #2e2f42;
-    /* check if needed */
-    padding-top: 72px;
-    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
     text-align: center;
-
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 16px;
 }
 
 .form {
@@ -696,7 +696,6 @@ footer .another-color {
     justify-content: center;
     align-items: center;
     margin: 0;
-
 }
 
 .form-container {
@@ -706,19 +705,17 @@ footer .another-color {
     flex-wrap: wrap;
     width: 360px;
     margin-bottom: 8px;
-
 }
 
 .form-label {
-    margin-bottom: 4px;
+
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    /* display: flex;
-    flex-direction: column; */
-    /* position: relative; */
+    display: block;
+    margin-bottom: 4px;
 }
 
 .form-input-wrap {
@@ -730,37 +727,29 @@ footer .another-color {
 }
 
 .form-input {
-    /* padding: 10px; */
-    /* padding-left: 40px; */
-    background-color: transparent;
-    outline: transparent;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
     width: 100%;
     height: 40px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
     padding-left: 38px;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .input-icon .input-icon-svg {}
 
-.form-input:active,
-.form-input:focus {
-    /* border: 1px solid #4d5ae5; */
-
-}
 
 .form-input::placeholder {
     color: #7e5c5c;
     font-style: italic;
 }
 
-.input-icon {}
-
 .input-icon-svg {
     position: absolute;
-    top: 50%;
     left: 16px;
+    top: 50%;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
@@ -770,8 +759,6 @@ footer .another-color {
 .form-input:hover+.input-icon-svg,
 .form-input:focus+.input-icon-svg {
     fill: #4d5ae5;
-    border: 1px solid #4d5ae5;
-
 }
 
 
@@ -812,40 +799,36 @@ footer .another-color {
 }
 
 .form-textarea-container {
-    display: flex;
     margin-bottom: 16px;
+    width: 360px;
 }
 
 .form-label-textarea {
-    /* margin-bottom: 5px; */
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: flex;
-    margin-bottom: 16px;
-    flex-direction: column;
-    /* gap: 4px; */
+
 }
 
 .form-textarea {
+    width: 100%;
+    height: 120px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 100%;
-    height: 120px;
-    color: rgba(46, 47, 66, 0.4);
-    /* margin-bottom: 16px; */
+    background-color: transparent;
     padding: 8px 16px;
     outline: transparent;
     resize: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-textarea:hover {
+.form-textarea:focus {
     border-color: #4D5AE5;
 }
 
@@ -854,19 +837,23 @@ footer .another-color {
 }
 
 .checkbox-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 24px; */
+    width: 360px;
     margin-bottom: 24px;
+
 }
 
 .checkbox-label {
-    /* font-weight: 400; */
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .checkbox-link {
@@ -876,19 +863,18 @@ footer .another-color {
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #4d5ae5;
-
 }
 
 .checkbox-input {
+    position: absolute;
+    opacity: 0;
     visibility: hidden;
 }
 
-.checkbox-input:checked+.checkbox-label>.input-span-check {
-    /* background-color: #4d5ae5; */
-    fill: #f4f4fd;
-}
-
 .input-span-check {
+    position: relative;
+    top: 0;
+    left: 0;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 16px;
@@ -898,4 +884,22 @@ footer .another-color {
     align-items: center;
     justify-content: center;
     fill: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.input-icon-check-svg {
+    fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked+.checkbox-label .input-span-check {
+    background-color: #4d5ae5;
+    border: none;
+}
+
+.checkbox-input:checked+.checkbox-label .input-icon-check-svg {
+    fill: #f4f4fd;
 }
